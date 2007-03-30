@@ -5,8 +5,8 @@
 //   L1 DT Track Finder EDProducer
 //
 //
-//   $Date: 2007/02/27 11:44:00 $
-//   $Revision: 1.5 $
+//   $Date: 2007/03/12 00:47:26 $
+//   $Revision: 1.6 $
 //
 //   Author :
 //   J. Troconiz              UAM Madrid
@@ -52,16 +52,11 @@ DTTrackFinder::~DTTrackFinder() {
 
 void DTTrackFinder::produce(edm::Event& e, const edm::EventSetup& c) {
 
-  cout << endl;
-  cout << "**** L1MuonDTTFTrigger processing event  ****" << endl;
-
   L1MuDTTrackFinder* dtbx = setup1->TrackFinder();
   dtbx->clear();
   dtbx->run(e);
 
   int ndt = dtbx->numberOfTracks();
-  cout << "Number of muons found by the L1 DTBX TRIGGER : "
-       << ndt << endl;
 
   auto_ptr<L1MuDTTrackContainer> tra_product(new L1MuDTTrackContainer);
   auto_ptr<vector<L1MuRegionalCand> >
