@@ -1,4 +1,4 @@
-module DTTrackFinder = DTTrackFinder {
+module l1DttfEmulDigis = DTTrackFinder {
        untracked int32 Debug = 0
        untracked bool  Overlap = true
        untracked int32 BX_min = -9
