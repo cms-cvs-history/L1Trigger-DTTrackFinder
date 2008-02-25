@@ -1,4 +1,8 @@
 module l1DttfEmulDigis = DTTrackFinder {
+
+       InputTag DTDigi_Source  = l1DTTPGEmulDigis
+       InputTag CSCStub_Source = l1CscTfTrackEmulDigis
+
        untracked int32 Debug = 0
        untracked bool  Overlap = true
        untracked int32 BX_min = -9
