@@ -8,6 +8,7 @@ module dttfDigis = DTTrackFinder {
        untracked int32 BX_min = -9
        untracked int32 BX_max =  7
        untracked int32 Extrapolation_Filter = 1
+       untracked bool  Open_LUTs = false
        untracked bool  Extrapolation_21 = false
        untracked bool  EtaTrackFinder = true
        untracked bool  OutOfTime_Filter = false
